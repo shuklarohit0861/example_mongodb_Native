@@ -25,7 +25,7 @@ function gethello(req, res) {
 
 function createData(req, res){
     userServices.create(req.body)
-        .then(function(){
+        .then(function(result){
             res.sendStatus(200);
         }).catch(function(err){
             res.status(400).send(err);

@@ -21,6 +21,7 @@ function getAll(){
            deferred.reject(err.name + " : "+ err.message);
        }
        deferred.resolve(docs);
+       
    })
     return deferred.promise;
 }
@@ -35,6 +36,7 @@ function create(userParams){
         }
 
         deferred.resolve(result.ops.length);
+       
     })
     return deferred.promise;
 }
